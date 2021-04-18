@@ -8,10 +8,12 @@ let token, noteID;
 
 describe('notes test', () => {
 	before((done) => {
+        const TESTUSER = process.env.TESTUSER;
+        const TESTUSERPASSWORD = process.env.TESTUSERPASSWORD;
 		chai.request(server)
 			.post('/users/login')
             .type('form')
-			.send({mail: 'thedatcal@gmail.com', password: '123456'})
+			.send({mail: TESTUSER, password: TESTUSERPASSWORD})
 			.end((err, res) => {
                 if(err)
                     done(err)
