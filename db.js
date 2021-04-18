@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 module.exports = () => {
 
    const uri = process.env.DB_URI;
-   console.log(uri);
+   console.log("URI : ",uri);
     mongoose.connect(uri, {useFindAndModify: false,useCreateIndex : true,useNewUrlParser: true, useUnifiedTopology: true});
 
   mongoose.connection.on('open', () => {

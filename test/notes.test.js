@@ -8,6 +8,10 @@ let token, noteID;
 
 describe('notes test', () => {
 	before((done) => {
+        const DB_URI = process.env.DB_URI;
+        const API_SECRET_KEY = process.env.API_SECRET_KEY;
+        console.log('TEST#####',DB_URI);
+        console.log('TEST#####',API_SECRET_KEY);
 		chai.request(server)
 			.post('/users/login')
             .type('form')
