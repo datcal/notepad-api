@@ -17,7 +17,7 @@ describe('notes test', () => {
 			});
 	});
 
-	/*describe('/notes/GET notes', () => {
+	describe('/notes/GET notes', () => {
 		it('it should GET all the notes', (done) => {
 			chai.request(server)
 				.get('/notes')
@@ -29,6 +29,7 @@ describe('notes test', () => {
 				});
 		})
 	});
+    /*
 
 	describe('/notes/POST note', () => {
 		it('it should POST a note', (done) => {
