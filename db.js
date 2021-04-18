@@ -3,6 +3,9 @@ module.exports = () => {
 
    const uri = process.env.DB_URI;
    console.log("URI : ",uri);
+
+   const HASAN = process.env.HASAN;
+   console.log("HASAN : ",HASAN);
     mongoose.connect(uri, {useFindAndModify: false,useCreateIndex : true,useNewUrlParser: true, useUnifiedTopology: true});
 
   mongoose.connection.on('open', () => {
