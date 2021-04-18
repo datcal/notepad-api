@@ -7,13 +7,10 @@ chai.use(chaiHttp);
 let token, noteID;
 
 describe('notes test', () => {
-	before((done) => {
+	beforeOnce((done) => {
 		chai.request(server)
 			.post('/users/login')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
-            .catch(function(err) {
-                done(err)
-            })
 			.end((err, res) => {
                 if(err)
                     done(err)
@@ -28,9 +25,6 @@ describe('notes test', () => {
 			chai.request(server)
 				.get('/notes')
 				.set('x-access-token', token)
-                .catch(function(err) {
-                    done(err)
-                })
 				.end((err, res) => {
                     if(err)
                         done(err)
