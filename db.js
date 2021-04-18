@@ -1,24 +1,20 @@
 const mongoose = require('mongoose');
 module.exports = () => {
 
-   const uri = process.env.DB_URI;
-   console.log("URI : ",uri);
+    const DB_HOST = process.env.DB_HOST;
+    console.log("DB_HOST : ",DB_HOST);
 
-   const HASAN = process.env.HASAN;
-   console.log("HASAN : ",HASAN);
+    const DB_NAME = process.env.DB_NAME;
+    console.log("DB_NAME : ",DB_NAME);
+
+    const DB_USERNAME = process.env.DB_USERNAME;
+    console.log("DB_USERNAME : ",DB_USERNAME);
+
+    const DB_PASSWORD = process.env.DB_PASSWORD;
+    console.log("DB_PASSWORD : ",DB_PASSWORD);
    
-   const DB_USERNAME = process.env.DB_USERNAME;
-   console.log("DB_USERNAME : ",DB_USERNAME);
 
-   const DB_PASSWORD = process.env.DB_PASSWORD;
-   console.log("DB_PASSWORD : ",DB_PASSWORD);
-
-   const TEST1 = process.env.TEST1;
-   console.log("TEST1 : ",TEST1);
-
-   const TEST2 = process.env.TEST2;
-   console.log("TEST2 : ",TEST2);
-
+   const uri = "mongodb+srv://"+DB_USERNAME+":"+DB_PASSWORD+"@"+DB_HOST+"/"+DB_NAME+"?retryWrites=true&w=majority";
 
     mongoose.connect(uri, {useFindAndModify: false,useCreateIndex : true,useNewUrlParser: true, useUnifiedTopology: true});
 

@@ -6,10 +6,6 @@ var logger = require('morgan');
 
 require('dotenv').config();
 
-
-const BEY = process.env.HASAN;
-   console.log("APP HASAN : ",BEY);
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var notesRouter = require('./routes/notes');
