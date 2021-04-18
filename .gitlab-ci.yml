@@ -1,0 +1,13 @@
+image: node:15
+
+before_script:
+  - npm install
+  - export NODE_ENV=production
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  script:
+    - npm run test
