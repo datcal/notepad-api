@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - 14
+env:
+  - DB_URI
+  - API_SECRET_KEY
 before_install:
   - npm install
   - export NODE_ENV=production
