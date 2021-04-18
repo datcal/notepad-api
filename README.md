@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/datcal/notepad-api.svg?branch=main)](https://travis-ci.com/datcal/notepad-api)
+[![Build Status](https://gitlab.com/datcal/notepad-api/badges/main/pipeline.svg?ignore_skipped=true)](https://gitlab.com/datcal/notepad-api)
+
 
 # notepad-api
 Api for the notepad application
