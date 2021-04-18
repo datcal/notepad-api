@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 let token, noteID;
 
 describe('notes test', () => {
-	beforeOnce((done) => {
+	before((done) => {
 		chai.request(server)
 			.post('/users/login')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
