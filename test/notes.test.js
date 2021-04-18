@@ -11,11 +11,8 @@ describe('notes test', () => {
 		chai.request(server)
 			.post('/users/login')
             .type('form')
-            //.set('Content-Type', 'application/json')
-            //set('Content-Type', 'application/x-www-form-urlencoded')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
 			.end((err, res) => {
-                console.log(res.body);
                 if(err)
                     done(err)
 
@@ -23,15 +20,7 @@ describe('notes test', () => {
 				done();
 			});
 	});
-    it('(GET /) returns the homepage', (done) => {
-		chai.request(server)
-			.get('/')
-			.end((err, res) => {
-				res.should.have.status(200);
-				done();
-			})
-	});
-	/*describe('/notes/GET notes', () => {
+	describe('/notes/GET notes', () => {
 		it('it should GET all the notes', (done) => {
 			chai.request(server)
 				.get('/notes')
@@ -46,7 +35,7 @@ describe('notes test', () => {
 				});
 		})
 	});
-    /*
+    
 
 	describe('/notes/POST note', () => {
 		it('it should POST a note', (done) => {
@@ -114,5 +103,5 @@ describe('notes test', () => {
 					done();
 				});
 		});
-	});*/
+	});
 });

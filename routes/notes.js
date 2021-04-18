@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
-    console.log(req.body);
     const note = new Note(req.body);
 	const promise = note.save();
 	promise.then((data) => {

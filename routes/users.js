@@ -31,7 +31,7 @@ router.post('/register', function(req, res, next) {
 /* POST user login. */
 router.post('/login', function(req, res, next) {
   const { mail , password } = req.body;
-  console.log("LOGIN",mail,password);
+
   User.findOne(
     {
       mail
