@@ -12,6 +12,9 @@ describe('notes test', () => {
 			.post('/users/login')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
 			.end((err, res) => {
+                if(err)
+                    done(err)
+
 				token = res.body.token;
 				done();
 			});
@@ -23,6 +26,9 @@ describe('notes test', () => {
 				.get('/notes')
 				.set('x-access-token', token)
 				.end((err, res) => {
+                    if(err)
+                        done(err)
+
 					res.should.have.status(200);
 					res.body.should.be.a('array');
 					done();
