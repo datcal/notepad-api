@@ -8,7 +8,7 @@ let token, noteID;
 
 describe('notes test', () => {
 	before((done) => {
-        this.enableTimeouts(false)
+        chai.enableTimeouts(false)
 		chai.request(server)
 			.post('/users/login')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
