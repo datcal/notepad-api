@@ -15,7 +15,7 @@ describe('notes test', () => {
 				token = res.body.token;
 				done();
 			});
-	});
+	}).timeout(10000);
 
 	describe('/notes/GET notes', () => {
 		it('it should GET all the notes', (done) => {
