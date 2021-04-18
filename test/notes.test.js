@@ -10,7 +10,8 @@ describe('notes test', () => {
 	before((done) => {
 		chai.request(server)
 			.post('/users/login')
-            .set('Content-Type', 'application/json')
+            .type('form')
+            //.set('Content-Type', 'application/json')
             //set('Content-Type', 'application/x-www-form-urlencoded')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
 			.end((err, res) => {
