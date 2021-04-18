@@ -5,7 +5,7 @@
 # notepad-api
 Api for the notepad application
 
-You can deploy notepad application yourself. See the live example
+You can deploy the notepad application yourself. See the live example
 ```
 https://notepad-api-datcal.herokuapp.com
 ```
@@ -18,7 +18,7 @@ https://notepad-api-datcal.herokuapp.com
 
 
 ## Set up
-First clone the repo. Copy the `.env.example` file to `.env` (which will be ignored by Git):
+First, clone the repo. Copy the `.env.example` file to `.env` (which will be ignored by Git):
 
 ```bash
 cp .env.example .env
@@ -27,16 +27,16 @@ cp .env.example .env
 
 ## Configuring Database
 1. Go to the [MongoDB Atlas Console](https://www.mongodb.com/cloud/atlas/) and create a new database
-2. Get to database uri and Paste this in your .env file
+2. Get to database uri and paste this in your .env file
 
 ## Configuring JWT
-1. Define secret key in your .env file 
+1. Define a secret key and enter in your .env file 
 ```
 API_SECRET_KEY=SOME_LONG_TEXT
 ```
 
 ## Configuring Test Process
-1. Define test user mail and password in your .env file 
+1. Define test user mail and password and enter it into your .env file 
 
 ```
 TESTUSER=email
