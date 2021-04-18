@@ -15,6 +15,7 @@ describe('notes test', () => {
             //set('Content-Type', 'application/x-www-form-urlencoded')
 			.send({mail: 'thedatcal@gmail.com', password: '123456'})
 			.end((err, res) => {
+                console.log(res.body);
                 if(err)
                     done(err)
 
@@ -22,8 +23,15 @@ describe('notes test', () => {
 				done();
 			});
 	});
-
-	describe('/notes/GET notes', () => {
+    it('(GET /) returns the homepage', (done) => {
+		chai.request(server)
+			.get('/')
+			.end((err, res) => {
+				res.should.have.status(200);
+				done();
+			})
+	});
+	/*describe('/notes/GET notes', () => {
 		it('it should GET all the notes', (done) => {
 			chai.request(server)
 				.get('/notes')
